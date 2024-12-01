@@ -1,5 +1,4 @@
-import history as history
-import numpy as np
+import history
 
 file = open("./day1/data.txt")
 lines = file.readlines()

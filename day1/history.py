@@ -1,4 +1,3 @@
-
 import numpy as np
 
 def parse( lines ):
@@ -15,8 +14,7 @@ def parse( lines ):
         line_ii = lines[ii]
 
         line_ii = line_ii.replace("\n","")
-        line_ii = line_ii.replace("   "," ")
-        line_ii = line_ii.split(" ")
+        line_ii = line_ii.split("   ")
 
         leftColumn[ii] = int( line_ii[0] )
         rightColumn[ii] = int( line_ii[1] )
