@@ -1,5 +1,5 @@
-
 from itertools import product
+
 operations = ["+", "*"]
 operationsWithConcat = ["+", "*", "||"]
 
