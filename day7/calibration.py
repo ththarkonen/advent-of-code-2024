@@ -9,6 +9,7 @@ def parse( lines ):
     operationNumbers = []
 
     for line in lines:
+        
         line = line.replace("\n", "")
         line = line.split(":")
 
