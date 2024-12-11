@@ -17,8 +17,12 @@ def operate( stone ):
 
         midPoint = stoneEngravingLength // 2
         
-        leftStone = int( stoneStr[0:midPoint] )
-        rightStone = int( stoneStr[midPoint:] )
+        leftStone  = stoneStr[ 0:midPoint ]
+        rightStone = stoneStr[ midPoint: ]
+
+        leftStone  = int( leftStone )
+        rightStone = int( rightStone )
+        
         return [ leftStone, rightStone]
     
     else: return [ 2024 * stone ]
@@ -26,14 +30,14 @@ def operate( stone ):
 
 def blink( stones ):
 
-    newStones = Counter()
+    nextStones = Counter()
 
     for stone in stones:
 
         stoneAmount = stones[ stone ]
-        nextStones = operate( stone )
+        newStones = operate( stone )
 
-        for nextStone in nextStones:
-            newStones[ nextStone ] += stoneAmount
+        for newStone in newStones:
+            nextStones[ newStone ] += stoneAmount
         
-    return newStones
+    return nextStones
