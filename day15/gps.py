@@ -209,10 +209,13 @@ def simulateRobot( layout, moves):
 
 def simulateRobotWide( layout, moves):
 
+    history = [ layout ]
+
     for move in moves:
         layout = moveWideBoxes( layout, move)
+        history.append( layout.copy() )
 
-    return layout
+    return layout, history
 
 
 def coordinates( layout ):
